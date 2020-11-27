@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'organizador-tareas';
+  title = 'Organizador de Tareas';
+  item = '';
+  tasks = [];
+
+  addTask(item: string) {
+    this.tasks.push(item);
+  }
+
+  deleteTask(index: number) {
+    this.tasks.splice(index, 1);
+  }
 }
